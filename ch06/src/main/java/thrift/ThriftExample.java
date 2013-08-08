@@ -44,14 +44,14 @@ public class ThriftExample {
 
       ArrayList<Mutation> mutations = new ArrayList<Mutation>();
       mutations.add(new Mutation(false, ByteBuffer.wrap(COLUMN),
-        ByteBuffer.wrap(VALUE)));
+        ByteBuffer.wrap(VALUE), true));
       client.mutateRow(ByteBuffer.wrap(TABLE), ByteBuffer.wrap(ROW),
-        mutations);
+        mutations, null);
 
       ArrayList<byte[]> columnNames = new ArrayList<byte[]>();
       columnNames.add(FAMILY2);
       int scannerId = client.scannerOpen(ByteBuffer.wrap(TABLE), null,
-        null);
+        null, null);
       while (client.scannerGet(scannerId) != null)
         ;
       client.scannerClose(scannerId);

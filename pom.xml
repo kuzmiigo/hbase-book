@@ -17,7 +17,7 @@
   </scm>
 
   <properties>
-    <jdkLevel>1.6</jdkLevel>
+    <jdkLevel>1.7</jdkLevel>
     <requiredMavenVersion>[2.1,)</requiredMavenVersion>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
@@ -92,7 +92,7 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-core</artifactId>
-      <version>0.20-append-r1057313</version>
+      <version>1.2.1</version>
       <exclusions>
         <exclusion>
           <groupId>commons-cli</groupId>
@@ -171,7 +171,7 @@
     <dependency>
       <groupId>org.apache.zookeeper</groupId>
       <artifactId>zookeeper</artifactId>
-      <version>3.3.2</version>
+      <version>3.4.5</version>
       <exclusions>
         <exclusion>
           <groupId>log4j</groupId>
@@ -186,7 +186,7 @@
     <dependency>
       <groupId>org.apache.hbase</groupId>
       <artifactId>hbase</artifactId>
-      <version>0.91.0-SNAPSHOT</version>
+      <version>0.94.10</version>
       <exclusions>
         <exclusion>
           <groupId>org.apache.avro</groupId>
@@ -231,10 +231,6 @@
         <exclusion>
           <groupId>org.slf4j</groupId>
           <artifactId>slf4j-log4j12</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>com.google.protobuf</groupId>
-          <artifactId>protobuf-java</artifactId>
         </exclusion>
         <exclusion>
           <groupId>com.sun.jersey</groupId>
