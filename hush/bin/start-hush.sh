@@ -28,7 +28,12 @@ if [ ! -f "${cpfile}" ]; then
 fi
 CLASSPATH=${CLASSPATH}:`cat "${cpfile}"`
 
-JAVA=$JAVA_HOME/bin/java
+if [ -n "$JAVA_HOME" ]; then
+  JAVA="$JAVA_HOME/bin/java"
+else
+  JAVA=java
+fi
+
 JAVA_HEAP_MAX=-Xmx512m
 
 echo "====================="
